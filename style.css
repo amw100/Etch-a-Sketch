@@ -7,11 +7,18 @@ body {
 #grid {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
+    border: 2px solid red;
+    width: 800px;
+    height:800px;
+    grid-auto-rows: minmax(0,100em);
+    grid-template-areas: minmax(0, 100em);
 }
 
 .cell {
-    width: 1em;
-    padding: 1em;
     border: 0.125em solid black;
     background-color: #eee;
+}
+
+.cell-hover {
+    background-color: salmon;
 }
