@@ -1,24 +1,112 @@
 body {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  background-color: #6c8fae;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: bolder;
+  font-family: cursive;
+  text-align: center;
+  color: #d5a6bd;
+}
+
+.footer {
+  font-family: cursive;
+  font-weight: bolder;
+  color: #090a0f;
+}
+
+button {
+    font-family: sans-serif;
+    font-size: 2em;
+    background-color: #7289da;
+    color: #f1f1f1;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    width: 4em;
+    padding: 10px;
+    margin-top: 1em;
+}
+
+button:hover {
+    background-color: #f1f1f1;
+    color: #7289da;
+    cursor: pointer;
+}
+
+
+
+.controls-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin: 1em;
+    margin-left: auto;
 }
 
 #grid {
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    border: 2px solid red;
-    width: 800px;
-    height:800px;
-    grid-auto-rows: minmax(0,100em);
-    grid-template-areas: minmax(0, 100em);
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  border: 0.25em solid #8695b2;
+  width: 800px;
+  height: 800px;
+  grid-auto-rows: minmax(0, 100em);
+  grid-template-areas: minmax(0, 100em);
+  margin: auto;
+  
 }
 
 .cell {
-    border: 0.125em solid black;
-    background-color: #eee;
+  border: 0.125em solid black;
+  background-color: #f1f1f1;
 }
 
 .cell-hover {
-    background-color: salmon;
+  background-color:#1b2735;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  border: 0.25em solid #04aa6d;
+  border-radius: 5px;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04aa6d; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04aa6d; /* Green background */
+  cursor: pointer; /* Cursor on hover */
 }
